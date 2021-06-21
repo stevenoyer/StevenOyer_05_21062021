@@ -7,7 +7,7 @@ Vous pourrez la réutiliser dans votre projet si vous ne voulez pas vous embête
 ## Site web
 Le projet Orinoco est disponible [ici](https://orinoco.stevenoyer.fr/)
 
-![homepage](https://github.com/stevenoyer/StevenOyer_05_21062021/upload/main/assets/img/orinoco.stevenoyer.fr_.png)
+![homepage](https://github.com/stevenoyer/StevenOyer_05_21062021/blob/main/assets/img/orinoco.stevenoyer.fr_.png)
 
 #### Pré-requis
 - NodeJS
