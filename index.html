@@ -5,8 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orinoco</title>
+
+    <link rel="stylesheet" href="assets/css/uikit.min.css">
+    <link rel="stylesheet" href="assets/css/default.css">
+
+    <script src="assets/js/uikit.min.js" defer></script>
+    <script src="assets/js/uikit-icons.min.js" defer></script>
+    <script src="assets/js/index.js" defer></script>
 </head>
 <body>
-    
+    <header>
+
+        <a href="/" aria-label="Accueil logo"><img class="logo" src="assets/img/logo.png" alt="Logo Orinoco"></a>
+
+        <nav>
+            <ul>
+                <li><a href="panier.html" aria-label="Panier">Votre panier</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="uk-container-large uk-margin-large-top uk-margin-large-bottom">
+
+        <div id="articles--list" class="articles" uk-grid></div>
+
+        <template id="articles">
+                
+            <a href="" id="article--link" class="uk-width-1-3@l uk-width-1-2@m uk-width-1-1@s article">
+                <div class="uk-card uk-card-default">
+                    <div class="uk-card-media-top">
+                        <img id="article--img" src="" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 id="article--title" class="uk-card-title title-card"> <span id="article--price" class="uk-badge"></span></h3>
+                        <p id="article--description"></p>
+                    </div>
+                </div>
+            </a>
+            
+        </template>
+
+    </main>
+
+    <footer>
+        <p>Copyright &copy; Orinoco - <a href="https://github.com/stevenoyer/StevenOyer_05_21062021" target="_blank">Repository Github</a></p>
+    </footer>
 </body>
 </html>
