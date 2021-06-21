@@ -1,7 +1,7 @@
 # Orinoco - OpenClassrooms
 
 ## API
-L'api Orinoco a été hébergé sur ce lien : [api.orinoco.stevenoyer.fr](https://api.orinoco.stevenoyer.fr/)
+L'api Orinoco a été hébergée sur ce lien : [api.orinoco.stevenoyer.fr](https://api.orinoco.stevenoyer.fr/)
 Vous pourrez la réutiliser dans votre projet si vous ne voulez pas vous embêter à l'héberger.
 
 ## Site web
