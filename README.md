@@ -6,7 +6,7 @@ Orinoco est un site e-commerce voulant se démarquer des grands-site e-commerce 
 ## Techno et framework utilisées
 - Html
 - CSS
-- [Uikit](https://getuikit.com/)
+- [Uikit](https://getuikit.com/) => Framework
 - Javascript
 
 ## API
