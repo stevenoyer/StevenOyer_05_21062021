@@ -64,12 +64,12 @@ main {
     transition: all 1s;
 }
 
-.article .uk-badge {
+.uk-badge {
     padding: 15px 10px;
     transition: all 1s;
 }
 
-.article .title-card {
+.title-card {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -79,6 +79,12 @@ main {
     height: 15rem;
     width: 100%;
     object-fit: cover;
+}
+
+.article--single .uk-badge:hover {
+    background: red;
+    transition: all 1s;
+    cursor: pointer;
 }
 
 .logo {

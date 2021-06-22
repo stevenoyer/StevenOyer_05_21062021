@@ -2,7 +2,7 @@
 (async function() {
     
     const products = await getAllProducts();
-    insertProductOnPage(products)
+    insertProductsOnPage(products)
 
 }());
 
@@ -27,7 +27,7 @@ async function getAllProducts()
 }
 
 // Insert product on the page
-function insertProductOnPage(products)
+function insertProductsOnPage(products)
 {
 
     // Clean block 'articles'
@@ -36,7 +36,7 @@ function insertProductOnPage(products)
     // Loop products
     products.forEach((products) => {
         displayProduct(products)
-    });
+    })
 
 }
 

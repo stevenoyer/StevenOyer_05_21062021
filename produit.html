@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orinoco</title>
+
+    <link rel="stylesheet" href="assets/css/uikit.min.css">
+    <link rel="stylesheet" href="assets/css/default.css">
+
+    <script src="assets/js/uikit.min.js" defer></script>
+    <script src="assets/js/uikit-icons.min.js" defer></script>
+    <script src="assets/js/product.js" defer></script>
+</head>
+<body>
+    <header>
+
+        <a href="/" aria-label="Accueil logo"><img class="logo" src="assets/img/logo.png" alt="Logo Orinoco"></a>
+
+        <nav>
+            <ul>
+                <li><a href="panier.html" aria-label="Panier">Votre panier</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="uk-container-large uk-margin-large-top uk-margin-large-bottom">
+
+        <div class="article--single">
+            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                <div class="uk-card-media-left uk-cover-container">
+                    <img id="article--img" src="" alt="" uk-cover>
+                    <canvas width="600" height="400"></canvas>
+                </div>
+                <div>
+                    <div class="uk-card-body">
+                        <h3 id="article--title" class="uk-card-title title-card"></h3>
+                        <p id="article--description"></p>
+    
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="form-stacked-select">Choisissez la lentille de votre produit</label>
+                            <div class="uk-form-controls">
+                                <select id="article--option" class="uk-select" id="form-stacked-select">
+                                </select>
+                            </div>
+                        </div>
+    
+                        <button id="addCart" class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom">Ajouter au panier</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <p>Copyright &copy; Orinoco - <a href="https://github.com/stevenoyer/StevenOyer_05_21062021" target="_blank">Repository Github</a></p>
+    </footer>
+</body>
+</html>
