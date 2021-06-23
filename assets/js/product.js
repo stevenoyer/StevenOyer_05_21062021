@@ -9,10 +9,17 @@
     const addCart = document.getElementById('addCart')
 
     addCart.addEventListener('click', function() {
-        alert('In Dev')
+        
+        addProductToCart()
+        
     })
 
 }());
+
+function addProductToCart()
+{
+    alert('In dev')
+}
 
 
 // Get params url
