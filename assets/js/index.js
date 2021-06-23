@@ -54,9 +54,13 @@ function displayProduct(product)
     // Clone template article
     const cloneTemplate = document.importNode(template.content, true)
 
+    // Format price
+    let formatPrice = new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' })
+    let price = formatPrice.format(product.price)
+
     // Insert data in template
     cloneTemplate.getElementById('article--img').src = product.imageUrl
-    cloneTemplate.getElementById('article--title').innerHTML = `${product.name} <span id="article--price" class="uk-badge">${product.price / 100}.00€</span>`
+    cloneTemplate.getElementById('article--title').innerHTML = `${product.name} <span id="article--price" class="uk-badge">${price}</span>`
     cloneTemplate.getElementById('article--description').textContent = product.description
     cloneTemplate.getElementById('article--link').href = '/produit.html?id=' + product._id
 
