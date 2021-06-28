@@ -33,12 +33,10 @@ function showCart()
 
     if (price == 0) {
         document.getElementById('cart-empty').style.display = 'block'
-        document.getElementById('cart-total').style.display = 'none'
-        document.getElementById('cart-table').style.display = 'none'
+        document.getElementById('cart-block').style.display = 'none'
     }else {
         document.getElementById('cart-empty').style.display = 'none'
-        document.getElementById('cart-total').style.display = 'block'
-        document.getElementById('cart-table').style.display = 'block'
+        document.getElementById('cart-block').style.display = 'block'
     }
 
 }
