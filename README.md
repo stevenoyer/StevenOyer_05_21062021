@@ -3,7 +3,7 @@
 ## Projet
 Orinoco est un site e-commerce voulant se démarquer des grands-site e-commerce comme Amazon en créant des applications thématiques ne vendant qu’un seul groupe de produits. Il y a par exemple Oribook pour les livres ou Oritextil pour les vêtements.
 
-## Techno et framework utilisées
+## Techno et framework utilisés
 - Html
 - CSS
 - [Uikit](https://getuikit.com/) => Framework
