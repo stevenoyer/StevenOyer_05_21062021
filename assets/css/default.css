@@ -103,3 +103,37 @@ footer p {
     margin: 0;
     padding: 15px;
 }
+
+.uk-notification-message  {
+    background: #32d296;
+    border-radius: 10px;
+}
+
+.uk-notification-message-success {
+    color: #fff;
+}
+
+.article-card {
+    margin: 20px 0;
+}
+
+.article-card::after {
+    content: '';
+    display: block;
+    margin: 20px 0;
+    border-bottom: 1px solid #999;
+}
+
+.offcanvas-title {
+    margin-top: 0;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.article-card .uk-badge {
+    background: #1b79d8;
+    width: 20px;
+    height: 20px;
+    color: white;
+    padding: 10px;
+}
