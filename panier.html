@@ -27,7 +27,35 @@
 
     <main class="uk-container-large uk-margin-large-top uk-margin-large-bottom">
 
-        
+        <div id="cart-empty" class="uk-text-center">
+            <h1>Votre panier est vide</h1>
+            <a href="index.html">Retour à la liste des articles</a>
+        </div>
+
+        <table id="cart-table" class="uk-table uk-table-responsive uk-table-divider uk-table-middle uk-text-center">
+            <thead>
+                <tr>
+                    <th class="uk-width-large uk-text-center">Produits</th>
+                    <th class="uk-width-large uk-text-center">Quantité</th>
+                    <th class="uk-width-large uk-text-center">Montant</th>
+                    <th class="uk-width-small uk-text-center"></th>
+                </tr>
+            </thead>
+            <tbody id="table-products">
+            </tbody>
+        </table>
+
+        <template id="table-cart">
+            <tr id="table-tr">
+                <td class="uk-width-large" id="table-img"></td>
+                <td class="uk-width-large" id="table-quantity"></td>
+                <td class="uk-width-large" id="table-amount"></td>
+                <td class="uk-width-small" id="table-trash"><a id="cart--trash" class="uk-icon-link" uk-icon="trash"></a></td>
+            </tr>
+        </template>
+
+        <hr>
+        <p id="cart-total" class="uk-text-right">Total de votre commande : <span id="cart-total-price">20.00€</span></p>
 
     </main>
 

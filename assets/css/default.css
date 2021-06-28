@@ -137,3 +137,18 @@ footer p {
     color: white;
     padding: 10px;
 }
+
+#table-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#table-img > p {
+    margin: 0;
+}
+
+#cart-empty {
+    display: none;
+}

@@ -22,21 +22,21 @@
 function showCart()
 {
 
-    let price = 0;
-
     // Clean block 'articles-card-list'
     document.getElementById('articles-card-list').innerHTML = ''
 
     let productsCart = JSON.parse(localStorage.getItem('cart'))
+
+    let price = 0
 
     console.log(productsCart)
     
     productsCart.forEach(product => {
         
         if (product.quantity > 1) {
-            price += product.price * product.quantity
+            price += (product.price / 100) * product.quantity
         }else {
-            price += product.price
+            price += product.price / 100
         }
         
         templateCart(product)
