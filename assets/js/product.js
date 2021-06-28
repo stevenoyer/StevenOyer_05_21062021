@@ -22,6 +22,8 @@
 function showCart()
 {
 
+    let price = 0;
+
     // Clean block 'articles-card-list'
     document.getElementById('articles-card-list').innerHTML = ''
 
@@ -30,8 +32,17 @@ function showCart()
     console.log(productsCart)
     
     productsCart.forEach(product => {
+        
+        if (product.quantity > 1) {
+            price += product.price * product.quantity
+        }else {
+            price += product.price
+        }
+        
         templateCart(product)
     })
+
+    document.getElementById('total-price').textContent = 'Sous total : ' + price + '.00€'
 
 }
 
