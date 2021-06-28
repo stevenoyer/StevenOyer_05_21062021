@@ -152,3 +152,8 @@ footer p {
 #cart-empty {
     display: none;
 }
+
+#formData {
+    margin: 50px auto;
+    width: 80%;
+}
