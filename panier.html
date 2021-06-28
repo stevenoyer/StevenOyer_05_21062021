@@ -32,72 +32,30 @@
             <a href="index.html">Retour à la liste des articles</a>
         </div>
 
-        <div id="cart-block">
-            <table id="cart-table" class="uk-table uk-table-responsive uk-table-divider uk-table-middle uk-text-center">
-                <thead>
-                    <tr>
-                        <th class="uk-width-large uk-text-center">Produits</th>
-                        <th class="uk-width-large uk-text-center">Quantité</th>
-                        <th class="uk-width-large uk-text-center">Montant</th>
-                        <th class="uk-width-small uk-text-center"></th>
-                    </tr>
-                </thead>
-                <tbody id="table-products">
-                </tbody>
-            </table>
-    
-            <template id="table-cart">
-                <tr id="table-tr">
-                    <td class="uk-width-large" id="table-img"></td>
-                    <td class="uk-width-large" id="table-quantity"></td>
-                    <td class="uk-width-large" id="table-amount"></td>
-                    <td class="uk-width-small" id="table-trash"><a id="cart--trash" class="uk-icon-link" uk-icon="trash"></a></td>
+        <table id="cart-table" class="uk-table uk-table-responsive uk-table-divider uk-table-middle uk-text-center">
+            <thead>
+                <tr>
+                    <th class="uk-width-large uk-text-center">Produits</th>
+                    <th class="uk-width-large uk-text-center">Quantité</th>
+                    <th class="uk-width-large uk-text-center">Montant</th>
+                    <th class="uk-width-small uk-text-center"></th>
                 </tr>
-            </template>
-    
-            <hr>
-            <p id="cart-total" class="uk-text-right">Total de votre commande : <span id="cart-total-price"></span></p>
+            </thead>
+            <tbody id="table-products">
+            </tbody>
+        </table>
 
-            <form id="formData" class="uk-grid-small" uk-grid>
-                
-                <div class="uk-width-1-2@s">
-                    <label for="name">Nom</label>
-                    <input class="uk-input" name="lastname" type="text" placeholder="Nom" required>
-                </div>
+        <template id="table-cart">
+            <tr id="table-tr">
+                <td class="uk-width-large" id="table-img"></td>
+                <td class="uk-width-large" id="table-quantity"></td>
+                <td class="uk-width-large" id="table-amount"></td>
+                <td class="uk-width-small" id="table-trash"><a id="cart--trash" class="uk-icon-link" uk-icon="trash"></a></td>
+            </tr>
+        </template>
 
-                <div class="uk-width-1-2@s">
-                    <label for="firstname">Prénom</label>
-                    <input class="uk-input" name="firstname" type="text" placeholder="Prénom" required>
-                </div>
-
-                <div class="uk-width-1-1">
-                    <label for="email">E-mail</label>
-                    <input class="uk-input" name="email" type="email" placeholder="E-mail" required>
-                </div>
-
-                <div class="uk-width-1-1">
-                    <label for="address">Adresse</label>
-                    <input class="uk-input" name="address" type="text" placeholder="Adresse" required>
-                </div>
-
-                <div class="uk-width-1-2@s">
-                    <label for="zipcode">Code postal</label>
-                    <input class="uk-input" name="zipcode" type="text" placeholder="Code postal" required>
-                </div>
-
-                <div class="uk-width-1-2@s">
-                    <label for="city">Ville</label>
-                    <input class="uk-input" name="city" type="text" placeholder="Ville" required>
-                </div>
-
-                <div class="uk-width-1-1 uk-text-center">
-                    <input type="submit" class="uk-button uk-button-primary uk-width-1-1" value="Valider la commande">
-                </div>
-                
-                
-            </form>
-        </div>
-
+        <hr>
+        <p id="cart-total" class="uk-text-right">Total de votre commande : <span id="cart-total-price"></span></p>
 
     </main>
 
