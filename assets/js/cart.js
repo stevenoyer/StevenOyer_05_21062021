@@ -3,6 +3,11 @@
     
     showCart()
 
+    document.getElementById('validateForm').addEventListener('click', function(e) {
+        e.preventDefault()
+        checkInputs()
+    })
+
 }());
 
 // Show cart in localstorage
@@ -113,5 +118,53 @@ function templateCart(product)
 
     // Display template with data
     cartList.appendChild(cloneTemplate)
+
+}
+
+function checkInputs()
+{
+
+    const formData = new FormData(document.querySelector('#formData')) 
+    const body = JSON.stringify(Object.fromEntries(formData.entries()))
+
+    for (let value of formData.entries()) {
+
+        console.log(value)
+        
+        /* if (i[0] == "email" && i[1] != "") {
+            console.log("plein")
+        }else {
+            console.log("vide")
+        }
+        
+        if (i[0] == "zipcode" && i[1] != "") {
+            console.log("plein")
+        }else {
+            console.log("vide")
+        } */
+
+        switch (value[0]) {
+            case 'email':
+                if (value[1] != "") {
+                    return true
+                }else {
+                    return false
+                }
+                break;
+            case 'zipcode':
+                if (value[1] != "" ) {
+                    return true
+                }else {
+                    return false
+                }
+                break;
+            
+            default:
+                console.log('Veuillez remplir tous les champs')
+        }
+        
+    }
+
+    console.log(body)
 
 }
