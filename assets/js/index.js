@@ -1,8 +1,12 @@
 // Main function and auto called on load page
 (async function() {
     
-    const products = await getAllProducts();
-    insertProductsOnPage(products)
+    try {
+        const products = await getAllProducts();
+        insertProductsOnPage(products)
+    } catch (error) {
+        console.warn(error)
+    }
 
 }());
 
