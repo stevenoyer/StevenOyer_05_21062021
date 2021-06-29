@@ -1,7 +1,14 @@
 // Main function and auto called on load page
 (async function() {
     
-    showCart()
+    if (localStorage.getItem('cart') == null) {
+        document.getElementById('cart-empty').style.display = 'block'
+        document.getElementById('cart-block').style.display = 'none'
+    }else {
+        document.getElementById('cart-empty').style.display = 'none'
+        document.getElementById('cart-block').style.display = 'block'
+        showCart()
+    }
 
     document.querySelector('form').addEventListener('submit', function(e) {
         e.preventDefault()
