@@ -3,7 +3,7 @@
     
     showCart()
 
-    document.getElementById('validateForm').addEventListener('click', function(e) {
+    document.querySelector('form').addEventListener('submit', function(e) {
         e.preventDefault()
         checkInputs()
     })
@@ -121,50 +121,56 @@ function templateCart(product)
 
 }
 
+function getAllProductsIds()
+{
+    const allProducts = JSON.parse(localStorage.getItem('cart'))
+    return allProducts.map( product => product._id )
+}
+
 function checkInputs()
 {
-
     const formData = new FormData(document.querySelector('#formData')) 
-    const body = JSON.stringify(Object.fromEntries(formData.entries()))
+    const contact = Object.fromEntries(formData.entries())
 
-    for (let value of formData.entries()) {
+    delete contact.zipcode
 
-        console.log(value)
-        
-        /* if (i[0] == "email" && i[1] != "") {
-            console.log("plein")
-        }else {
-            console.log("vide")
-        }
-        
-        if (i[0] == "zipcode" && i[1] != "") {
-            console.log("plein")
-        }else {
-            console.log("vide")
-        } */
-
-        switch (value[0]) {
-            case 'email':
-                if (value[1] != "") {
-                    return true
-                }else {
-                    return false
-                }
-                break;
-            case 'zipcode':
-                if (value[1] != "" ) {
-                    return true
-                }else {
-                    return false
-                }
-                break;
-            
-            default:
-                console.log('Veuillez remplir tous les champs')
-        }
-        
+    const products = getAllProductsIds()
+    /* products.push('pouet pouet') */
+    
+    const body = {
+        products,
+        contact
     }
 
     console.log(body)
+
+    document.getElementById('validateForm').style.display = 'none'
+
+    fetch('https://api.orinoco.stevenoyer.fr/api/cameras/order', {
+        method: 'post',
+        headers: { "content-type" : "application/json" },
+        body: JSON.stringify(body)
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.json()
+        }
+
+        UIkit.notification({message: 'Erreur serveur', status: 'danger', timeout: 2000})
+    })
+    .then(data => {
+        if (data.orderId) {
+            UIkit.notification({message: 'Votre commande a bien été passée', status: 'success', timeout: 2000})
+            
+            setTimeout(() => {
+                location.assign('confirmation.html?order=' + data.orderId)
+            }, 2000)
+
+        }
+    })
+    .catch(console.warn)
+    .finally(() => {
+        document.getElementById('validateForm').style.display = 'block'
+    })
 
 }

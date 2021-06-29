@@ -104,12 +104,12 @@ footer p {
     padding: 15px;
 }
 
-.uk-notification-message  {
-    background: #32d296;
+.uk-notification-message {
     border-radius: 10px;
 }
 
-.uk-notification-message-success {
+.uk-notification-message.uk-notification-message-success {
+    background: #32d296;
     color: #fff;
 }
 
@@ -156,4 +156,10 @@ footer p {
 #formData {
     margin: 50px auto;
     width: 80%;
+}
+
+.uk-notification-message.uk-notification-message-danger {
+    background: #f0506e;
+    border-radius: 10px;
+    color: white;
 }

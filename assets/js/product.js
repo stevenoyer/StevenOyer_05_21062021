@@ -10,9 +10,13 @@
     const cartTrash = document.getElementById('cart--trash')
 
     addCart.addEventListener('click', function() {
-        
-        addProductToCart(product)
-        showCart()
+
+        try {
+            addProductToCart(product)
+            showCart()
+        } catch (error) {
+            console.warn(error)
+        }
         
     })
 
