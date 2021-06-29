@@ -8,6 +8,7 @@
     if (params.get('order') != "" && params != "") {
         // Get params order and print in element
         document.getElementById('orderCommand').textContent = params.get('order')
+        localStorage.removeItem('cart')
     }else {
         // Return home page if empty params and order
         location.assign('index.html')
