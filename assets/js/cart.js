@@ -132,6 +132,13 @@ function checkInputs()
     const formData = new FormData(document.querySelector('#formData')) 
     const contact = Object.fromEntries(formData.entries())
 
+    for (let value of formData.entries()) {
+        if (value[1] == "" || value[1] == " ") {
+            UIkit.notification({message: 'Veuillez vérifier tous les champs !', status: 'danger', timeout: 2000})
+            return false
+        }
+    }
+
     delete contact.zipcode
 
     const products = getAllProductsIds()
